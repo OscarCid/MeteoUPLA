@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:background="#b5000000">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cambio1"
+        android:src="@android:drawable/ic_media_previous"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cambio2"
+        android:src="@android:drawable/ic_media_next"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0.0 °C"
+        android:id="@+id/textView"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/actionButton"
+        android:src="@android:drawable/stat_notify_sync"
+        android:layout_alignTop="@+id/ver_mas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Temperatura"
+        android:textColor="#ffffff"
+        android:id="@+id/textView2"
+        android:textSize="12sp"
+        android:layout_below="@+id/ultimo_registro"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="8dp"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Estación"
+        android:textColor="#ffffff"
+        android:id="@+id/estacion"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ver más Info"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:id="@+id/ver_mas"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Humedad"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:id="@+id/textxt"
+        android:layout_marginRight="18dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/actionButton"
+        android:layout_alignEnd="@+id/actionButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0%"
+        android:textSize="16sp"
+        android:id="@+id/humedad"
+        android:layout_below="@+id/textxt"
+        android:layout_alignRight="@+id/textxt"
+        android:layout_alignEnd="@+id/textxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="-------"
+        android:textSize="12sp"
+        android:id="@+id/ultimo_registro"
+        android:layout_below="@+id/estacion"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Precipitación Hoy"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:id="@+id/textView3"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Radiación Solar"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:id="@+id/textView4"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignRight="@+id/humedad"
+        android:layout_alignEnd="@+id/humedad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0.0 mm"
+        android:id="@+id/prec_Hoy"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:textSize="16sp"
+        android:id="@+id/r_solar"
+        android:layout_below="@+id/textView4"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+</RelativeLayout>
