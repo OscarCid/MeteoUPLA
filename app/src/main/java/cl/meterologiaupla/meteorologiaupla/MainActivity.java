@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -20,14 +21,29 @@ public class MainActivity extends AppCompatActivity {
 
         Pushbots.sharedInstance().init(this);
 
-        WebView webView = new WebView(MainActivity.this);// webview in mainactivity
+        final WebView webView = new WebView(MainActivity.this);// webview in mainactivity
         webView.clearCache(true);
-
         setContentView(webView);// set the webview as the layout
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://sistema.meteorologiaupla.cl/Clima/Android/webview/index.php");
 
-        webView.setWebViewClient(new MyWebViewClient());
+        final Bundle extras = getIntent().getExtras();
+
+        if (null != extras && getIntent().getExtras().containsKey("author"))
+        {
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.loadUrl("http://sistema.meteorologiaupla.cl/Clima/Android/webview/index.php");
+            webView.setWebViewClient(new WebViewClient(){
+                public void onPageFinished(WebView view, String url){
+                    webView.loadUrl("javascript:init('" + extras.getString("author") + "')");
+                }
+            });
+        }
+        else
+        {
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.loadUrl("http://sistema.meteorologiaupla.cl/Clima/Android/webview/index.php");
+
+            webView.setWebViewClient(new MyWebViewClient());
+        }
 
     }
 
